@@ -16,6 +16,13 @@ describe('Test degli endpoint API', () => {
         expect(res.body).toEqual({ message: 'Hello client!' })
     })
 
+    it('GET di /friend dovrebbe restituire Hello friend', async () => {
+        const res = await request(app).get('/friend');
+
+        expect(res.statusCode).toEqual(200);
+        expect(res.body).toEqual({ message: 'Hello friend!' })
+    })
+
     afterAll(done => {
         close();
         done();

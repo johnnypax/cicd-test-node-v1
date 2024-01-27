@@ -10,6 +10,10 @@ app.get('/client', (req, res) => {
     res.json({ message: 'Hello client!' });
 });
 
+app.get('/friend', (req, res) => {
+    res.json({ message: 'Hello friend!' });
+});
+
 const server = app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
